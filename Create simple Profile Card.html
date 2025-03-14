@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .name {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .designation {
+            color: gray;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .bio {
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-img">
+        <div class="name">Lalit Borse</div>
+        <div class="designation">Associate Software Engineer</div>
+        <p class="bio">Passionate about coding, technology, and building scalable applications.</p>
+        <div class="social-icons">
+            <a href="#" target="_blank">&#xf09a;</a> <!-- LinkedIn Icon -->
+            <a href="#" target="_blank">&#xf099;</a> <!-- Twitter Icon -->
+            <a href="#" target="_blank">&#xf09b;</a> <!-- GitHub Icon -->
+        </div>
+    </div>
+</body>
+</html>
