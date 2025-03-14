@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            flex-direction: column;
+        }
+        .slider-container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+        }
+        .slider-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .slider-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <img id="slider-image" src="" alt="Image Slider">
+    </div>
+    <div class="slider-buttons">
+        <button onclick="prevImage()">Previous</button>
+        <button onclick="nextImage()">Next</button>
+    </div>
+
+    <script>
+        const images = [
+            "https://via.placeholder.com/400x300/ff7f7f/333333?text=Image+1",
+            "https://via.placeholder.com/400x300/7f7fff/333333?text=Image+2",
+            "https://via.placeholder.com/400x300/7fff7f/333333?text=Image+3"
+        ];
+        let currentIndex = 0;
+
+        function updateImage() {
+            document.getElementById("slider-image").src = images[currentIndex];
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateImage();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateImage();
+        }
+
+        // Initialize the slider with the first image
+        updateImage();
+    </script>
+</body>
+</html>
